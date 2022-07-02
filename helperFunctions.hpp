@@ -1,5 +1,5 @@
-#ifndef DIJKSTRAHELPER_HPP
-#define DIJKSTRAHELPER_HPP
+#ifndef HELPERFUNCTIONS_HPP
+#define HELPERFUNCTIONS_HPP
 
 #include <iostream>
 #include <string>
