@@ -9,7 +9,7 @@
 struct node
 {
     // default constructor for node class
-    node();
+    node(std::string info, node * nextNode = nullptr);
 
 private:
     std::string info;
@@ -30,7 +30,7 @@ public:
     ~linkedList();
 
 private:
-
+    node * head;
 };
 
 #endif
