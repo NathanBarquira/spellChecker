@@ -2,6 +2,7 @@
 #define HASHSET_HPP
 
 #include <iostream>
+#include "helperFunctions.hpp"
 
 // Notes:
 // * I am assuming I can translate everything into a std::string, so I will not be using

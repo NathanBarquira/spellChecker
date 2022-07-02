@@ -2,10 +2,10 @@
 
 int main()
 {
-    print<std::string>();
-    print<std::string>("This is the test cases for the program: ");
+    print();
+    print("This is the test cases for the program: ");
 
-    print<std::string>();
+    print();
 
     return 0;
 }
