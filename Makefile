@@ -5,6 +5,6 @@ all: main testCases
 main: main.cpp
 	g++ $(CXXFLAGS) main.cpp -o main
 testCases: testCases.cpp
-	g++ $(CXXFLAGS) helperFunctions.cpp linkedList.cpp testCases.cpp -o testCases
+	g++ $(CXXFLAGS) helperFunctions.cpp linkedList.cpp hashSet.cpp testCases.cpp -o testCases
 clean:
 	rm main testCases

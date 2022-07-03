@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/ics46/myprojects/spellChecker'
+g++ -ggdb -std=c++11 -Wpedantic -Wall -Wextra -Werror -Wzero-as-null-pointer-constant helperFunctions.cpp linkedList.cpp hashSet.cpp testCases.cpp -o testCases
+make: Leaving directory '/home/ics46/myprojects/spellChecker'
+ 
