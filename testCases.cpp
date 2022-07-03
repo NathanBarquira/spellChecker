@@ -7,8 +7,8 @@ int main()
     print("This is the test cases for the program: ");
 
     print();
-    print("Testing linkedlist class constructor");
-    node N("hello");
+    print("Testing linkedlist class constructor: ");
+    linkedList L;
 
     print();
 

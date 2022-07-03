@@ -11,4 +11,10 @@ linkedList::linkedList()
     : head(nullptr)
 {
     print("DEBUG: inside default constructor for linkedlist");
+    // std::cout << "DEBUG: inside default linkedlist constructor " << std::endl;
+}
+
+linkedList::~linkedList()
+{
+    print("DEBUG: inside destructor for linkedlist");
 }
