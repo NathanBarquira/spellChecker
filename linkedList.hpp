@@ -46,13 +46,14 @@ public:
     // print the current linkedList
     void printList();
 
-
-
-private:
+    // bool that tells if the string is inside the list
+    bool contains(std::string word);
 
     // the first node (or nullptr) to the linkedlist
     node * head;
 
+
+private:
     // deletes the entire list
     void deleteList();
 };

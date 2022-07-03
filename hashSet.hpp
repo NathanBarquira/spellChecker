@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "helperFunctions.hpp"
+#include "hashFunctions.hpp"
 #include "linkedList.hpp"
 
 // Notes:
@@ -22,6 +23,9 @@ public:
     // copy constructor for hashSet
     hashSet(const hashSet& s);
 
+    // adding a string into the hashSet
+    void add(std::string word);
+
     // destructor for hashSet
     ~hashSet();
 
@@ -35,5 +39,7 @@ private:
     // the number of elements in the set
     int size = 0;
 };
+
+
 
 #endif

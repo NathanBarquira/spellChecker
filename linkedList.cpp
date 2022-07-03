@@ -111,6 +111,19 @@ void linkedList::printList()
     }
 }
 
+bool linkedList::contains(std::string word)
+{
+    node * tempHead = head;
+    while (tempHead != nullptr)
+    {
+        if (tempHead->info == word)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 void linkedList::deleteList()
 {
     while (head != nullptr)
