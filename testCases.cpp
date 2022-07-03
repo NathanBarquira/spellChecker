@@ -64,6 +64,13 @@ int main()
     H.add("name");
 
     print();
+    print("testing hashSet contains method");
+    std::cout << "should be 1 (true): " << H.contains("how") << std::endl;
+    std::cout << "should be 1 (true): " << H.contains("my") << std::endl;
+    std::cout << "should be 0 (false): " << H.contains("elephant") << std::endl;
+    std::cout << "should be 0 (false): " << H.contains("baby") << std::endl;
+
+    print();
 
     return 0;
 }

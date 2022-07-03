@@ -55,7 +55,11 @@ void hashSet::add(std::string word)
 
 bool hashSet::contains(std::string word)
 {
-    
+    print("DEBUG: inside contains method");
+    // this hashes the word and finds its corresponding index
+    int hash = hashPaulLarson(word);
+    int hashIndex = hash % capacity;
+    return hashArray[hashIndex].contains(word);
 }
 
 hashSet::~hashSet()
