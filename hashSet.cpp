@@ -53,6 +53,11 @@ void hashSet::add(std::string word)
     }
 }
 
+bool hashSet::contains(std::string word)
+{
+
+}
+
 hashSet::~hashSet()
 {
     print("DEBUG: inside hashSet destructor");

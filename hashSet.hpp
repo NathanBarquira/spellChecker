@@ -30,6 +30,9 @@ public:
     // adding a string into the hashSet
     void add(std::string word);
 
+    // bool checking to see if a word is inside the set
+    bool contains(std::string word);
+
     // destructor for hashSet
     ~hashSet();
 
