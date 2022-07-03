@@ -11,6 +11,15 @@ int main()
     linkedList L;
 
     print();
+    print("Testing linkedlist add");
+    L.add("world!");
+    L.add("Hello");
+
+    print();
+    print("Testing print function");
+    L.printList();
+
+    print();
 
     return 0;
 }
