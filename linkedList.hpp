@@ -28,18 +28,33 @@ public:
     // copy constructor for linkedList class
     linkedList(const linkedList& l);
 
+    // move constructor for linkedlist class
+    linkedList(linkedList&& l);
+
+    // assignment operator
+    linkedList& operator=(const linkedList& l);
+
     // destructor for linkedList class
     ~linkedList();
 
     // adding a node to the linkedlist
-    void add(std::string info);
+    void addNode(std::string info);
+
+    // deleting a node in the linkedlist
+    void deleteNode();
 
     // print the current linkedList
     void printList();
 
+
+
 private:
+
     // the first node (or nullptr) to the linkedlist
     node * head;
+
+    // deletes the entire list
+    void deleteList();
 };
 
 #endif
