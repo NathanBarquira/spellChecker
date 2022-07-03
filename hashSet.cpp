@@ -44,6 +44,7 @@ void hashSet::add(std::string word)
                     currentPointer = currentPointer->next;
                 }
             }
+            delete[] oldHashArray;
         }
     }
     else
@@ -55,4 +56,5 @@ void hashSet::add(std::string word)
 hashSet::~hashSet()
 {
     print("DEBUG: inside hashSet destructor");
+    delete[] hashArray;
 }
