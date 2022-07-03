@@ -113,6 +113,7 @@ void linkedList::printList()
 
 bool linkedList::contains(std::string word)
 {
+    print("DEBUG: inside contains method");
     node * tempHead = head;
     while (tempHead != nullptr)
     {
@@ -120,6 +121,7 @@ bool linkedList::contains(std::string word)
         {
             return true;
         }
+        tempHead = tempHead->next;
     }
     return false;
 }

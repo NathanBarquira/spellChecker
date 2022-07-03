@@ -10,6 +10,6 @@
 // The original function has a "salt" parameter meant to dissuade
 // hash comprimising, but security isn't important here so we initialize
 // it to be 0.
-unsigned hashPaulLarson(std::string s);
+int hashPaulLarson(std::string s);
 
 #endif

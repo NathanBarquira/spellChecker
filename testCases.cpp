@@ -53,6 +53,17 @@ int main()
     hashSet H;
 
     print();
+    print("testing hashSet add");
+    H.add("how");
+    H.add("how");
+    H.add("are");
+    H.add("you");
+    H.add("doing");
+    H.add("today");
+    H.add("my");
+    H.add("name");
+
+    print();
 
     return 0;
 }

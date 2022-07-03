@@ -11,17 +11,23 @@ void hashSet::add(std::string word)
     print("DEBUG: inside the add function");
 
     // this hashes the word and puts it in the right spot
-    int hashIndex = hashPaulLarson(word) % capacity;
+    int hash = hashPaulLarson(word);
+    int hashIndex = hash % capacity;
+    std::cout << "DEBUG: should be hash value: " << hash << std::endl;
+    std::cout << "DEBUG: should be hashIndex: " << hashIndex << std::endl;
 
     // testing to see if that word already exists
     if (hashArray[hashIndex].contains(word) == false)
     {
+        std::cout << "DEBUG: word is not contained" << std::endl;
         hashArray[hashIndex].addNode(word);
         size += 1;
+        std::cout << "DEBUG: should be size: " << size << std::endl;
 
         // checking if should rehash
         if (size >= 0.7 * capacity)
         {
+            print("DEBUG: rehashing process");
             // doubling the capacity and resetting the size
             capacity = capacity * 2;
             size = 0;
@@ -39,6 +45,10 @@ void hashSet::add(std::string word)
                 }
             }
         }
+    }
+    else
+    {
+        print("DEBUG: cannot add same value since it is a set");
     }
 }
 
