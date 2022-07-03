@@ -6,6 +6,18 @@ hashSet::hashSet()
     print("DEBUG: inside hashSet constructor");
 }
 
+int hashSet::sizeCount()
+{
+    print("DEBUG: inside the sizeCount method");
+    return size;
+}
+
+int hashSet::capacityCount()
+{
+    print("DEBUG: inside the capacityCount method");
+    return capacity;
+}
+
 void hashSet::add(std::string word)
 {
     print("DEBUG: inside the add function");
@@ -60,6 +72,11 @@ bool hashSet::contains(std::string word)
     int hash = hashPaulLarson(word);
     int hashIndex = hash % capacity;
     return hashArray[hashIndex].contains(word);
+}
+
+void hashSet::printAll()
+{
+    
 }
 
 hashSet::~hashSet()

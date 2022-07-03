@@ -33,6 +33,15 @@ public:
     // bool checking to see if a word is inside the set
     bool contains(std::string word);
 
+    // returns the number of elements in the set
+    int sizeCount();
+
+    // returns the capacity of the array
+    int capacityCount();
+
+    // prints all the elements in the set
+    void printAll();
+
     // destructor for hashSet
     ~hashSet();
 

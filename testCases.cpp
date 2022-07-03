@@ -71,6 +71,15 @@ int main()
     std::cout << "should be 0 (false): " << H.contains("baby") << std::endl;
 
     print();
+    print("testing sizeCount method");
+    std::cout << "should be 7: " << H.sizeCount() << std::endl;
+
+    print();
+    print("testing capacityCount method");
+    std::cout << "should be 20: " << H.capacityCount() << std::endl;
+
+
+    print();
 
     return 0;
 }
