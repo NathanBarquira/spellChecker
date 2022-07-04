@@ -11,6 +11,7 @@
 
 // notes:
 // * currently only supports all lowercase letter words.
+// * there is a bug!!
 
 int main()
 {
