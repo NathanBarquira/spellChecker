@@ -42,6 +42,9 @@ public:
     // prints all the elements in the set
     void printAll();
 
+    // removes a string from the hashSet
+    void remove(std::string word);
+
     // destructor for hashSet
     ~hashSet();
 

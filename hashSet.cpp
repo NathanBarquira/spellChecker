@@ -83,6 +83,25 @@ void hashSet::printAll()
     }
 }
 
+void hashSet::remove(std::string word)
+{
+    print("DEBUG: inside remove method");
+
+    // this hashes the word and goes to the right spot
+    int hash = hashPaulLarson(word);
+    int hashIndex = hash % capacity;
+    std::cout << "DEBUG: should be hash value: " << hash << std::endl;
+    std::cout << "DEBUG: should be hashIndex: " << hashIndex << std::endl;
+
+    // deleting the actual node if it exists.
+    if (contains(word))
+    {
+        size -= 1;
+        hashArray[hashIndex].deleteNode(word);
+        std::cout << "DEBUG: should be size after remove: " << size << std::endl;
+    }
+}
+
 hashSet::~hashSet()
 {
     print("DEBUG: inside hashSet destructor");
