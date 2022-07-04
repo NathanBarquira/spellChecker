@@ -29,7 +29,7 @@ public:
     void add(std::string word);
 
     // bool checking to see if a word is inside the set
-    bool contains(std::string word);
+    bool contains(std::string word) const;
 
     // returns the number of elements in the set
     int sizeCount();

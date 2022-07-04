@@ -2,6 +2,7 @@
 #include <fstream>
 #include "hashSet.hpp"
 #include "loadFileFunctions.hpp"
+#include "spellCorrectFunctions.hpp"
 
 // The actual spell checker program.
 // This program uses the self-implemented data structures to
@@ -29,6 +30,10 @@ int main()
 
     // puts all the words into the wordBank
     loadAllWords(inputFile, wordBank);
+
+    
+
+    
 
     return 0;
 }

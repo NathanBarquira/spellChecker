@@ -66,7 +66,7 @@ void hashSet::add(std::string word)
     }
 }
 
-bool hashSet::contains(std::string word)
+bool hashSet::contains(std::string word) const
 {
     print("DEBUG: inside contains method");
     // this hashes the word and finds its corresponding index
