@@ -126,6 +126,45 @@ bool linkedList::contains(std::string word)
     return false;
 }
 
+void linkedList::deleteNode(std::string word)
+{
+    print("DEBUG: inside delete method");
+    
+    // can't delete anything if the head is a nullptr
+    if (head == nullptr)
+    {
+        return;
+    }
+
+    // for dealing with deleting the first node in the linkedlist
+    node * tempHead = head;
+    if (tempHead->info == word)
+    {
+        std::cout << "DEBUG: found the word! " << std::endl;
+        head = tempHead->next;
+        delete tempHead;
+        return;
+    }
+    
+    // for dealing with else
+    node * prevHead = tempHead;
+    tempHead = tempHead->next;
+    while (tempHead != nullptr)
+    {
+        std::cout << "DEBUG: tempHead->info: " << tempHead->info << std::endl;
+        std::cout << "DEBUG: prevHead->info: " << prevHead->info << std::endl;
+        if (tempHead->info == word)
+        {
+            std::cout << "DEBUG: found the word! " << std::endl;
+            prevHead->next = tempHead->next;
+            delete tempHead;
+            break;
+        }
+        prevHead = tempHead;
+        tempHead = tempHead->next;
+    }
+}
+
 void linkedList::deleteList()
 {
     while (head != nullptr)

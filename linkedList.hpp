@@ -49,6 +49,10 @@ public:
     // bool that tells if the string is inside the list
     bool contains(std::string word);
 
+    // finds a word in the linkedlist and deletes the node if it exists,
+    // else nothing happens
+    void deleteNode(std::string word);
+
     // the first node (or nullptr) to the linkedlist
     node * head;
 

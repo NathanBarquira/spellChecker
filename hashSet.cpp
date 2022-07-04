@@ -76,7 +76,11 @@ bool hashSet::contains(std::string word)
 
 void hashSet::printAll()
 {
-    
+    print("DEBUG: inside print list method");
+    for (int i = 0; i < capacityCount() ; ++i)
+    {
+        hashArray[i].printList();
+    }
 }
 
 hashSet::~hashSet()

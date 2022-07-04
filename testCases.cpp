@@ -49,35 +49,46 @@ int main()
     L3.printList();
 
     print();
-    print("testing hashSet constructor");
-    hashSet H;
+    print("testing delete method");
+    L2.printList();
+    L2.deleteNode("Hello");
+    L2.printList();
+    L2.deleteNode("world!");
+    L2.printList();
 
-    print();
-    print("testing hashSet add");
-    H.add("how");
-    H.add("how");
-    H.add("are");
-    H.add("you");
-    H.add("doing");
-    H.add("today");
-    H.add("my");
-    H.add("name");
+    // print();
+    // print("testing hashSet constructor");
+    // hashSet H;
 
-    print();
-    print("testing hashSet contains method");
-    std::cout << "should be 1 (true): " << H.contains("how") << std::endl;
-    std::cout << "should be 1 (true): " << H.contains("my") << std::endl;
-    std::cout << "should be 0 (false): " << H.contains("elephant") << std::endl;
-    std::cout << "should be 0 (false): " << H.contains("baby") << std::endl;
+    // print();
+    // print("testing hashSet add");
+    // H.add("how");
+    // H.add("how");
+    // H.add("are");
+    // H.add("you");
+    // H.add("doing");
+    // H.add("today");
+    // H.add("my");
+    // H.add("name");
 
-    print();
-    print("testing sizeCount method");
-    std::cout << "should be 7: " << H.sizeCount() << std::endl;
+    // print();
+    // print("testing hashSet contains method");
+    // std::cout << "should be 1 (true): " << H.contains("how") << std::endl;
+    // std::cout << "should be 1 (true): " << H.contains("my") << std::endl;
+    // std::cout << "should be 0 (false): " << H.contains("elephant") << std::endl;
+    // std::cout << "should be 0 (false): " << H.contains("baby") << std::endl;
 
-    print();
-    print("testing capacityCount method");
-    std::cout << "should be 20: " << H.capacityCount() << std::endl;
+    // print();
+    // print("testing sizeCount method");
+    // std::cout << "should be 7: " << H.sizeCount() << std::endl;
 
+    // print();
+    // print("testing capacityCount method");
+    // std::cout << "should be 20: " << H.capacityCount() << std::endl;
+
+    // print();
+    // print("testing print all method");
+    // H.printAll();
 
     print();
 
