@@ -23,3 +23,11 @@ std::string random_string()
 
     return str.substr(0, 32);    // assumes 32 < number of characters in str         
 }
+
+void printVector(const std::vector<std::string> & v)
+{
+    for (std::string::size_type i = 0; i < v.size(); ++i)
+    {
+        print(v[i]);
+    }
+}

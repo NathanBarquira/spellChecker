@@ -17,4 +17,7 @@ void print(std::string text);
 // generates a random string (borrowed from stack overflow!)
 std::string random_string();
 
+// prints all of the items in a vector
+void printVector(const std::vector<std::string> & v);
+
 #endif
