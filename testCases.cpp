@@ -99,6 +99,15 @@ int main()
     std::cout << "DEBUG: should be 0 (false): " << H.contains("name") << std::endl;
 
     print();
+    print("big test");
+    hashSet test;
+    for (int i = 0; i < 100; ++i)
+    {
+        test.add(random_string());
+    }
+    test.printAll();
+
+    print();
 
     return 0;
 }

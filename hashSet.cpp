@@ -23,7 +23,7 @@ void hashSet::add(std::string word)
     print("DEBUG: inside the add function");
 
     // this hashes the word and puts it in the right spot
-    int hash = hashPaulLarson(word);
+    int hash = std::abs(hashPaulLarson(word));
     int hashIndex = hash % capacity;
     std::cout << "DEBUG: should be hash value: " << hash << std::endl;
     std::cout << "DEBUG: should be hashIndex: " << hashIndex << std::endl;
@@ -35,6 +35,7 @@ void hashSet::add(std::string word)
         hashArray[hashIndex].addNode(word);
         size += 1;
         std::cout << "DEBUG: should be size: " << size << std::endl;
+        std::cout << "DEBUG: should be capacity: " << capacity << std::endl;
 
         // checking if should rehash
         if (size >= 0.7 * capacity)
@@ -69,7 +70,7 @@ bool hashSet::contains(std::string word)
 {
     print("DEBUG: inside contains method");
     // this hashes the word and finds its corresponding index
-    int hash = hashPaulLarson(word);
+    int hash = std::abs(hashPaulLarson(word));
     int hashIndex = hash % capacity;
     return hashArray[hashIndex].contains(word);
 }
@@ -88,7 +89,7 @@ void hashSet::remove(std::string word)
     print("DEBUG: inside remove method");
 
     // this hashes the word and goes to the right spot
-    int hash = hashPaulLarson(word);
+    int hash = std::abs(hashPaulLarson(word));
     int hashIndex = hash % capacity;
     std::cout << "DEBUG: should be hash value: " << hash << std::endl;
     std::cout << "DEBUG: should be hashIndex: " << hashIndex << std::endl;
