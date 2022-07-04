@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul  3 14:12:40 2022
+# Make data base, printed on Sun Jul  3 22:31:18 2022
 
 # Variables
 
@@ -66,6 +66,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1001/bus
 VSCODE_VERBOSE_LOGGING = true
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
+ 
 # environment
 VSCODE_CWD = /home/ics46/myprojects/spellChecker
 # environment
@@ -137,6 +138,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
+ 
 XDG_VTNR = 7
 # environment
 CLUTTER_BACKEND = x11
@@ -202,6 +204,7 @@ LC_ALL = C
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
+ 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # default
@@ -215,7 +218,7 @@ TERM = xterm-256color
 # environment
 VSCODE_PID = 4781
 # variable set hash-table stats:
-# Load=102/1024=10%, Rehash=0, Collisions=10/127=8%
+# Load=102/1024=10%, Rehash=0, Collisions=10/131=8%
 
 # Pattern-specific Variable Values
 
@@ -223,9 +226,9 @@ VSCODE_PID = 4781
 
 # Directories
 
-# . (device 64768, inode 3408395): 17 files, no impossibilities.
+# . (device 64768, inode 3408395): 20 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -235,37 +238,44 @@ VSCODE_PID = 4781
 
 # Not a target:
 testCases.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-03 03:56:20.662901782
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: main testCases
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-03 03:39:39.010543052
+#  Last modified 2022-07-03 22:31:17.103709801
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-02 13:13:05.296096243
+ 
+#  Last modified 2022-07-03 22:30:57.963429369
 #  File has been updated.
 #  Successfully updated.
 
 testCases: testCases.cpp
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-03 04:00:57.072788958
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from 'Makefile', line 8):
 	g++ $(CXXFLAGS) hashFunctions.cpp helperFunctions.cpp linkedList.cpp hashSet.cpp testCases.cpp -o testCases
 
@@ -277,7 +287,6 @@ testCases: testCases.cpp
 
 clean:
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -285,26 +294,45 @@ clean:
 
 main: main.cpp
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-03 04:00:55.412750755
+#  Implicit/static pattern stem: ''
+#  Last modified 2022-07-03 22:14:20.444290322
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := main.cpp
+# automatic
+# | := 
+# automatic
+# < := main.cpp
+# automatic
+# ^ := main.cpp
+# automatic
+# ? := main.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
 #  recipe to execute (from 'Makefile', line 6):
-	g++ $(CXXFLAGS) main.cpp -o main
+	g++ $(CXXFLAGS) hashFunctions.cpp loadFileFunctions.cpp helperFunctions.cpp linkedList.cpp hashSet.cpp main.cpp -o main
 
 # files hash-table stats:
-# Load=9/1024=1%, Rehash=0, Collisions=1/26=4%
+# Load=9/1024=1%, Rehash=0, Collisions=1/27=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 23 / storage = 256 B / avg = 11 B
-# current buf: size = 8162 B / used = 256 B / count = 23 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 26 / storage = 320 B / avg = 12 B
+# current buf: size = 8162 B / used = 320 B / count = 26 / avg = 12 B
 
-# strcache performance: lookups = 38 / hit rate = 39%
+# strcache performance: lookups = 42 / hit rate = 38%
 # hash-table stats:
-# Load=23/8192=0%, Rehash=0, Collisions=1/38=3%
-# Finished Make data base on Sun Jul  3 14:12:40 2022
+# Load=26/8192=0%, Rehash=0, Collisions=1/42=2%
+# Finished Make data base on Sun Jul  3 22:31:18 2022
 
  

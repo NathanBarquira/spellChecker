@@ -14,8 +14,6 @@
 // * once size of set is bigger than 0.7 of its capacity, we will rehash everything
 
 // TODO:
-// * write contains
-// * check if add method words perfectly
 
 class hashSet
 {
