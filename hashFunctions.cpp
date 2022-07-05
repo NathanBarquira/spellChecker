@@ -2,11 +2,9 @@
 
 int hashPaulLarson(std::string s)
 {
+    const char * c = s.c_str();
     int h = 0;
-    for (std::string::size_type i = 0; i < s.size()-1; ++i)
-    {
-        h = h * 101 + (int) s[i + 1];
-    }
-
+    while (*c)
+        h = h * 101 + (int) *c++;
     return h;
 }

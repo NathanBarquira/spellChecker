@@ -35,6 +35,25 @@ int main()
     // puts all the words into the wordBank
     loadAllWords(inputFile, wordBank);
 
+    // checking to see if inputWords is correct
+    // std::fstream checkWords;
+    // checkWords.open("vector_file.txt",ios_base::out);
+ 
+    // for(std::string::size_type i = 0; i < wordBank.size(); i++)
+    // {
+    //     checkWords << v[i] << std::endl;
+
+    // }
+ 
+    // checkWords.close();
+    std::vector<std::string> allWords(wordBank.allToVector());
+    std::cout << "DEBUG: should be 1000: " << allWords.size() << std::endl;
+    // for (std::string::size_type i = 0; i < allWords.size(); i++)
+    // {
+    //     print(allWords[i]);
+    // }
+
+
     // the input that will be spell checked
     std::string textInput;
     
@@ -44,6 +63,7 @@ int main()
     // transferring the input to a vector of words
     std::getline(std::cin, textInput);
     inputToVector(textInput, words);
+    
 
     print("DEBUG: all of the words");
     printVector(words);
@@ -52,17 +72,22 @@ int main()
 
     for (std::string::size_type i = 0; i < words.size(); ++i)
     {
-        std::vector<std::string> suggestions(findSuggestions(words[i], wordBank));
-        std::cout << "DEBUG: should be current word suggestion: " << suggestions[i] << std::endl;
-        if (suggestions.size() > 0)
+        std::cout << "DEBUG: should be current word suggestion: " << words[i] << std::endl;
+        std::getline(std::cin, textInput);
+        if (!wordBank.contains(words[i]))
         {
-            std::cout << "By \"" << words[i] << "\", do you mean..." << std::endl;
-            for (std::string::size_type i = 0; i < suggestions.size(); ++i)
+            std::vector<std::string> suggestions(findSuggestions(words[i], wordBank));
+            if (suggestions.size() > 0)
             {
-                std::cout << suggestions[i] << "?" << std::endl;
+                std::cout << "By \"" << words[i] << "\", do you mean..." << std::endl;
+                for (std::string::size_type i = 0; i < suggestions.size(); ++i)
+                {
+                    std::cout << suggestions[i] << "?" << std::endl;
+                }
+                std::getline(std::cin, textInput);
             }
-            std::getline(std::cin, textInput);
         }
+        
     }
     
     

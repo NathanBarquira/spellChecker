@@ -5,6 +5,7 @@
 #include "helperFunctions.hpp"
 #include "hashFunctions.hpp"
 #include "linkedList.hpp"
+#include <vector>
 
 // Notes:
 // * I am assuming I can translate everything into a std::string, so I will not be using
@@ -39,6 +40,9 @@ public:
 
     // prints all the elements in the set
     void printAll();
+
+    // returns a vector with all words in the set (mainly for debugging)
+    std::vector<std::string> allToVector();
 
     // removes a string from the hashSet
     void remove(std::string word);

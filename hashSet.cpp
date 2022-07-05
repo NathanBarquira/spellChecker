@@ -68,7 +68,7 @@ void hashSet::add(std::string word)
 
 bool hashSet::contains(std::string word) const
 {
-    print("DEBUG: inside contains method");
+    // print("DEBUG: inside contains method");
     // this hashes the word and finds its corresponding index
     int hash = std::abs(hashPaulLarson(word));
     int hashIndex = hash % capacity;
@@ -82,6 +82,21 @@ void hashSet::printAll()
     {
         hashArray[i].printList();
     }
+}
+
+std::vector<std::string> hashSet::allToVector()
+{
+    std::vector<std::string> returnVector;
+    for (int i = 0; i < capacityCount() ; ++i)
+    {
+        node * temp = hashArray[i].head;
+        while (temp != nullptr)
+        {
+            returnVector.push_back(temp->info);
+            temp = temp->next;
+        }
+    }
+    return returnVector;
 }
 
 void hashSet::remove(std::string word)
