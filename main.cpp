@@ -72,6 +72,7 @@ int main()
     print("Type a text entry that you want to be spell checked and press enter.");
     std::getline(std::cin, textInput);
     inputToVector(textInput, words);
+    print();
     
 
     // print("DEBUG: all of the words");
@@ -89,6 +90,7 @@ int main()
             std::vector<std::string> suggestions(findSuggestions(words[i], wordBank));
             if (suggestions.size() > 0)
             {
+                print();
                 std::cout << "By \"" << words[i] << "\", do you mean..." << std::endl;
                 for (std::string::size_type i = 0; i < suggestions.size(); ++i)
                 {
@@ -114,12 +116,14 @@ int main()
                                 numInput = "";
                                 break;
                             }
+                            print();
                             print("Not a valid input. Please try again.");
                         }
                         
                     }
                     catch(const std::exception& e)
                     {
+                        print();
                         print("Not a valid input. Please try again.");
                     }
                     
@@ -131,6 +135,8 @@ int main()
     }
     
     // printing the new sentence:
+    print();
+    print();
     print("This is your spell corrected text entry:");
     print();
     for (std::string::size_type i = 0; i < words.size(); ++i)
@@ -139,7 +145,7 @@ int main()
     }
     std::cout << std::endl;
     print();
-    print("Press enter to continue:");
+    print("Press enter to continue.");
     std::getline(std::cin, numInput);
 
     

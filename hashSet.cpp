@@ -3,44 +3,44 @@
 hashSet::hashSet()
     : hashArray(new linkedList[10])
 {
-    print("DEBUG: inside hashSet constructor");
+    // print("DEBUG: inside hashSet constructor");
 }
 
 int hashSet::sizeCount()
 {
-    print("DEBUG: inside the sizeCount method");
+    // print("DEBUG: inside the sizeCount method");
     return size;
 }
 
 int hashSet::capacityCount()
 {
-    print("DEBUG: inside the capacityCount method");
+    // print("DEBUG: inside the capacityCount method");
     return capacity;
 }
 
 void hashSet::add(std::string word)
 {
-    print("DEBUG: inside the add function");
+    // print("DEBUG: inside the add function");
 
     // this hashes the word and puts it in the right spot
     int hash = std::abs(hashPaulLarson(word));
     int hashIndex = hash % capacity;
-    std::cout << "DEBUG: should be hash value: " << hash << std::endl;
-    std::cout << "DEBUG: should be hashIndex: " << hashIndex << std::endl;
+    // std::cout << "DEBUG: should be hash value: " << hash << std::endl;
+    // std::cout << "DEBUG: should be hashIndex: " << hashIndex << std::endl;
 
     // testing to see if that word already exists
     if (hashArray[hashIndex].contains(word) == false)
     {
-        std::cout << "DEBUG: word is not contained" << std::endl;
+        // std::cout << "DEBUG: word is not contained" << std::endl;
         hashArray[hashIndex].addNode(word);
         size += 1;
-        std::cout << "DEBUG: should be size: " << size << std::endl;
-        std::cout << "DEBUG: should be capacity: " << capacity << std::endl;
+        // std::cout << "DEBUG: should be size: " << size << std::endl;
+        // std::cout << "DEBUG: should be capacity: " << capacity << std::endl;
 
         // checking if should rehash
         if (size >= 0.7 * capacity)
         {
-            print("DEBUG: rehashing process");
+            // print("DEBUG: rehashing process");
             // doubling the capacity and resetting the size
             capacity = capacity * 2;
             size = 0;
@@ -62,7 +62,7 @@ void hashSet::add(std::string word)
     }
     else
     {
-        print("DEBUG: cannot add same value since it is a set");
+        // print("DEBUG: cannot add same value since it is a set");
     }
 }
 
@@ -77,7 +77,7 @@ bool hashSet::contains(std::string word) const
 
 void hashSet::printAll()
 {
-    print("DEBUG: inside print list method");
+    // print("DEBUG: inside print list method");
     for (int i = 0; i < capacityCount() ; ++i)
     {
         hashArray[i].printList();
@@ -101,25 +101,25 @@ std::vector<std::string> hashSet::allToVector()
 
 void hashSet::remove(std::string word)
 {
-    print("DEBUG: inside remove method");
+    // print("DEBUG: inside remove method");
 
     // this hashes the word and goes to the right spot
     int hash = std::abs(hashPaulLarson(word));
     int hashIndex = hash % capacity;
-    std::cout << "DEBUG: should be hash value: " << hash << std::endl;
-    std::cout << "DEBUG: should be hashIndex: " << hashIndex << std::endl;
+    // std::cout << "DEBUG: should be hash value: " << hash << std::endl;
+    // std::cout << "DEBUG: should be hashIndex: " << hashIndex << std::endl;
 
     // deleting the actual node if it exists.
     if (contains(word))
     {
         size -= 1;
         hashArray[hashIndex].deleteNode(word);
-        std::cout << "DEBUG: should be size after remove: " << size << std::endl;
+        // std::cout << "DEBUG: should be size after remove: " << size << std::endl;
     }
 }
 
 hashSet::~hashSet()
 {
-    print("DEBUG: inside hashSet destructor");
+    // print("DEBUG: inside hashSet destructor");
     delete[] hashArray;
 }
