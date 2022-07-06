@@ -25,7 +25,7 @@ int main()
     // for if its default
     if (file == "")
     {
-        file = "1000commonWords.txt";
+        file = "allWords.txt";
     }
 
 
