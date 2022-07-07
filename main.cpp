@@ -126,12 +126,9 @@ int main()
                         print();
                         print("Not a valid input. Please try again.");
                     }
-                    
                 }
-                
             }
         }
-        
     }
     
     // printing the new sentence:
@@ -148,11 +145,6 @@ int main()
     print("Press enter to continue.");
     std::getline(std::cin, numInput);
 
-    
-
-
-
-    
 
     return 0;
 }
